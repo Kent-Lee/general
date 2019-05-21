@@ -1,0 +1,19 @@
+{
+  "name": "Generals",
+  "version": "1.0.0",
+  "description": "Web Game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kent Lee",
+  "license": "ISC",
+  "dependencies": {
+    "collections": "^5.0.7",
+    "express": "*",
+    "morgan": "*",
+    "pg": "^7.4.0",
+    "sequelize": "^4.26.0",
+    "socket.io": "*"
+  }
+}

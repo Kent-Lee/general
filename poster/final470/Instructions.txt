@@ -1,0 +1,90 @@
+ADOBE INDESIGN PRINTING INSTRUCTIONS FOR SERVICE PROVIDER REPORT
+
+PUBLICATION NAME: posterPrint.indd
+
+PACKAGE DATE: 11/28/17 11:26 PM
+Creation Date: 11/28/17
+Modification Date: 11/28/17
+
+CONTACT INFORMATION
+
+Company Name: 
+Contact: Ankit Dassor
+Address: 
+
+
+
+
+
+Phone: 6042170902
+Fax: 
+Email: adassor@sfu.ca
+
+SPECIAL INSTRUCTIONS AND OTHER NOTES
+
+Please print on 24"x18" satin finish 8mil. 
+File contains a .5" bleed
+
+
+
+External Plug-ins 0
+Non Opaque Objects :On Page1
+
+FONTS
+4 Fonts Used; 0 Missing, 0 Embedded, 0 Incomplete, 2 Protected
+
+Fonts Packaged
+- Name: MinionPro-Regular; Type: OpenType Type 1, Status: OK
+- Name: Roboto-Bold; Type: TrueType, Status: OK
+Fonts Not Packaged
+- Name: Roboto-Regular; Type: OpenType TrueType, Status: Synced
+- Name: RobotoCondensed-Bold; Type: OpenType TrueType, Status: Synced
+
+
+COLORS AND INKS
+4 Process Inks; 0 Spot Inks
+
+- Name and Type: Process Cyan; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Magenta; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Yellow; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Black; Angle: 0.000; Lines/Inch: 0.000
+
+
+LINKS AND IMAGES
+(Missing & Embedded Links Only)
+Links and Images: 7 Links Found; 0 Modified, 0 Missing, 0 Inaccessible
+Images: 0 Embedded, 3 use RGB color space
+
+
+PRINT SETTINGS
+PPD: N/A, (HP4A61CE (HP Officejet Pro 8610))
+Printing To: Printer
+Number of Copies: 1
+Reader Spreads: No
+Even/Odd Pages: Both
+Pages: All
+Proof: No
+Tiling: None
+Scale: 100%, 100%
+Page Position: Upper Left
+Print Layers: Visible & Printable Layers
+Printer's Marks: None
+Bleed: 0 in, 0 in, 0 in, 0 in
+Color: Composite RGB
+Trapping Mode: None
+Send Image Data: Optimized Subsampling
+OPI/DCS Image Replacement: No
+Page Size: Custom: 24 in x 18 in
+Paper Dimensions: 8.5 in x 11 in
+Orientation: Portrait
+Negative: No
+Flip Mode: Off
+
+
+FILE PACKAGE LIST
+
+1. posterPrint.indd; type: Adobe InDesign publication; size: 1568K
+2. posterPrint.idml; type: InDesign Markup Document; size: 54K
+3. posterPrint.pdf; type: Adobe Acrobat Document; size: 417K
+4. MinionPro-Regular.otf; type: Font file; size: 213K
+5. Roboto-Bold.ttf; type: Font file; size: 132K

@@ -1,0 +1,4 @@
+Generals is a multiplayer, turn-based, tactical game in which two teams of up to four people fight for victory. Each team gets 60 seconds per turn, during which all team members can control any of their team's units. A team wins once all of the other team's units are destroyed. 
+Each team has 12 units: 4 heavy fighters, 6 light fighters, and 2 healers. Units can perform up to 3 actions per turn, at the cost of 1 AP each.
+Heavy units have 5HP, 10AP and can move 1 spot or attack enemies in a large radius for 3 HP. Light units have 3HP, 15AP, and can move 2 spots or attack in a small radius for 1 HP. Healing units have 3HP, 10AP, and can move 2 spots or heal in a small radius for 2 HP.
+Units in range of an attack must either move out of range during their team's next turn or take the hit. Units with 0 HP are destroyed, and units with 0 AP are unable to perform any actions.

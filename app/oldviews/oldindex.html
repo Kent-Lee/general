@@ -1,0 +1,278 @@
+<html>
+	<head>
+		<title>Generals</title>
+		<link rel="stylesheet" href="css/index.css">
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+<body>
+	<div id="userArea">
+		<form id="form-group">
+			<h1>Welcome, General</h1>
+			<p id="userError"></p>
+			<div class="btnCenter">
+				<input id="username" placeholder="Username"/>
+				<button id="joinButton">
+					Join the battle!
+				</button>
+				<button id="tutorialButton">
+					Tutorial
+				</button>
+			</div>
+		</form>
+	</div>
+	<div id="tutorialPage">
+		<div id="tutorial">
+			<p>
+				Select any of your teams units, and select an action. Units each get two actions per turn. Once a unit is selected, nearby squares you can move it to or attack are highlighted. The move action consumes 1AP/tile. The attack function is used attack nearby enemies at the cost of 1AP/attack. 
+			</p>
+			<p>
+				Turns are short, so act fast! Remember to communicate with your teammates, or you'll end up fighting over pieces.
+			</p>
+			<p>
+				Each round has two parts: a planning and execution phase. During the planning phase, both teams perform their actions in secret. In the execution phase, you cannot move pieces, but you can see the location and HP of enemy units from the last round. So, if you attack a tank at A4 during the planning phase, and that tank moves in the same phase, the attack will miss. 
+			</p>
+			<button id="backButton">
+				Back
+			</button>
+		</div>
+		
+	</div>
+	<div id="endPage">
+		<div id="end">
+			<p id="endText">
+				You win!
+			</p>
+			<button id="nextGame">
+				Next Game
+			</button>
+		</div>
+	</div>
+
+	<div id="gameBox">
+		<div id="actionMenu">
+			<div id="actionSwitch">
+				<button id="attack_btn"><img src="/images/attack.png" /></button>
+				<button id="move_btn"><img src="/images/move.png"/></button>
+				<button id="cancel_btn"><img src="/images/cancel.png" /></button>
+			</div>
+		</div>
+		<table id="gameBoard">
+			<tr class="headerRow">
+				<td class="headerRowEl"><div id="time"></div></td>
+				<td class="headerRowEl">A</td>
+				<td class="headerRowEl">B</td>
+				<td class="headerRowEl">C</td>
+				<td class="headerRowEl">D</td>
+				<td class="headerRowEl">E</td>
+				<td class="headerRowEl">F</td>
+				<td class="headerRowEl">G</td>
+				<td class="headerRowEl">H</td>
+				<td class="headerRowEl">I</td>
+				<td class="headerRowEl">J</td>
+				<td class="headerRowEl">K</td>
+				<td class="headerRowEl">L</td>
+			</tr>
+			<tr class="1">
+				<td class="headerCol">1</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="2">
+				<td class="headerCol">2</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="3">
+				<td class="headerCol">3</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="4">
+				<td class="headerCol">4</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="5">
+				<td class="headerCol">5</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="6">
+				<td class="headerCol">6</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="7">
+				<td class="headerCol">7</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="8">
+				<td class="headerCol">8</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="9">
+				<td class="headerCol">9</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="10">
+				<td class="headerCol">10</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="11">
+				<td class="headerCol">11</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+			<tr class="12">
+				<td class="headerCol">12</td>
+				<td class="1"></td>
+				<td class="2"></td>
+				<td class="3"></td>
+				<td class="4"></td>
+				<td class="5"></td>
+				<td class="6"></td>
+				<td class="7"></td>
+				<td class="8"></td>
+				<td class="9"></td>
+				<td class="10"></td>
+				<td class="11"></td>
+				<td class="12"></td>
+			</tr>
+		</table>
+	</div>
+	<div id="chatBox">
+		<div id="chatRoom">
+			<div id="roomSwitch">
+				<button id="roomGlobal">Global</button>
+				<button id="roomTeam">Team</button>
+			</div>
+			<div id="chatWindow">
+				<div id="output">
+				</div>
+				<div id="feedback">
+				</div>
+			</div>
+			<form id="messageForm">
+				<input id="message" placeholder="Message" />
+				<button id="messageSend">Send</button>
+			</form>
+	</div>
+	</div>
+</body>
+<script src="js/chat.js"></script>
+</html>
